@@ -1,21 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Lever : MonoBehaviour {
-
-    [SerializeField]
-    bool isBlack;
-
-    [SerializeField]
-    private LeverOpenDoorway doorwayScript;
+public class Lever : Switch {
 
 
 
 	// Update is called once per frame
 	void OnMouseOver()
-    {
-                
+    {         
         if(Input.GetKeyDown(KeyCode.E))
         {
             if(isBlack)
@@ -26,6 +17,7 @@ public class Lever : MonoBehaviour {
             {
                 doorwayScript.whiteActive = true;
             }
+            doorwayScript.CheckDoorActivity();
         }		
 	}
 }
