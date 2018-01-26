@@ -12,7 +12,7 @@ public class LeverOpenDoorway : MonoBehaviour {
 
     private void Awake()
     {
-        door = transform.Find("Doorway").Find("Door").gameObject;
+        door = transform.Find("Door").gameObject;
     }
 
     // Update is called once per frame
