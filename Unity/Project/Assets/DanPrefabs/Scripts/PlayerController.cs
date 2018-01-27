@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityStandardAssets.Characters.FirstPerson;
 
+using UnityEngine.UI;
+
 public class PlayerController : NetworkBehaviour {
     public GameObject playerGraphic;
     public GameObject playerVisor;
@@ -11,6 +13,9 @@ public class PlayerController : NetworkBehaviour {
     public Camera playerCam;
 
     public GameObject[] toDisable;
+
+    public Text tagText;
+
 
     private void Start()
     {
@@ -20,11 +25,17 @@ public class PlayerController : NetworkBehaviour {
             fps.enabled = false;
             playerCam.enabled = false;
         }
+        
     }
-
+  
     public override void OnStartLocalPlayer() {
         //playerGraphic.GetComponent<MeshRenderer>().material.color = Color.blue;
+
+        tagText = GameObject.Find("Text").GetComponent<Text>();
         playerGraphic.SetActive(false);
         playerVisor.SetActive(false);
+
+        GameManager.Instance.SetPlayer(gameObject);
+        tagText.text = gameObject.tag;
     }
 }
