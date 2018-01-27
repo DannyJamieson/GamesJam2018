@@ -7,9 +7,10 @@ public class CameraLayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         cam = this.GetComponent<Camera>();
-        if (this.gameObject == GameManager.Instance.WhitePlayer)
+        if (this.transform.parent.gameObject == GameManager.Instance.WhitePlayer)
         {
             cam.cullingMask = (1 << LayerMask.NameToLayer("White")) | (1 << LayerMask.NameToLayer("White Black"));
+            
         }
         else
         {

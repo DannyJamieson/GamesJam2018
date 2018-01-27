@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 124632526817995778}
   - component: {fileID: 114379163237351194}
   - component: {fileID: 114823425276029918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4224897579660352}
   - component: {fileID: 33247526393210712}
   - component: {fileID: 23858708924271156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 114728466632584020}
   - component: {fileID: 114629142136077098}
   - component: {fileID: 114144541820639350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FPSController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 33232116465273380}
   - component: {fileID: 65412273719212744}
   - component: {fileID: 23983315990526796}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

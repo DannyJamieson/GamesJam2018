@@ -28,9 +28,10 @@ public class PlayerController : NetworkBehaviour {
         }
         else
         {
-            GameManager.Instance.SetPlayer(gameObject);
+            
             tagText.text = gameObject.tag;
-        } 
+        }
+        GameManager.Instance.SetPlayer(gameObject);
     }
   
     public override void OnStartLocalPlayer() {
