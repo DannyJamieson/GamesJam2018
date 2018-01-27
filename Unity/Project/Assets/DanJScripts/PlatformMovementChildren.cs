@@ -1,25 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlatformMovementChildren : MonoBehaviour {
+[RequireComponent (typeof(NetworkTransform))]
+public class PlatformMovementChildren : NetworkBehaviour {
     public float startTime;
     public bool trigger = false;
-    float degreesPerSecond;
-    public float randomMovement;
-    public float rotValue;
-    public float journeyDistance;
-    public float movementSpeed;
+    float randomMovement = 5;
+
+    // public float rotValue;
+    float journeyDistance;
+    [SerializeField]
+    float movementSpeed;
     Vector3 endPos;
     Vector3 startPos;
     Quaternion endRot;
     Quaternion startRot;
+    Material myMaterial;
 
     //nice fucking comments DAN
     private void Start()
     {
+        if (transform.parent.GetComponent<PlatformMoving>() == null)
+        {
+            return;
+        }
+        //myMaterial = new Material(GetComponent<Renderer>().material);
+       // GetComponent<Renderer>().material = myMaterial;
+        
+
+
         movementSpeed = Random.Range(10, 15);
-        degreesPerSecond = movementSpeed * 4.5f;
 
         endPos = transform.position;
         endRot = transform.rotation;
@@ -57,6 +69,9 @@ public class PlatformMovementChildren : MonoBehaviour {
         float distCovered = (Time.time - startTime) * movementSpeed;
         float fracJourney = distCovered / journeyDistance;
         transform.position = Vector3.Lerp(startPos,endPos,fracJourney);
+      //  Color newColour = myMaterial.color;
+       // newColour.a = fracJourney;
+        //myMaterial.color = newColour;
     }
 
     void SetNewRot()

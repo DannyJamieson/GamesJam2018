@@ -12,7 +12,11 @@ public class PlatformMoving : MonoBehaviour {
     {
         for(int i =0; i<transform.childCount; i++)
         {
-            movingPlatforms.Add(transform.GetChild(i).GetComponent<PlatformMovementChildren>());
+            try
+            {
+                movingPlatforms.Add(transform.GetChild(i).GetComponent<PlatformMovementChildren>());
+            }
+            catch { }
         }
     }
 
@@ -37,11 +41,14 @@ public class PlatformMoving : MonoBehaviour {
     void TriggerChildren()
     {
         foreach (PlatformMovementChildren child in movingPlatforms)
-        {
-            child.startTime = Time.time;
-            child.trigger = true;
+        {try
+            {
+                child.startTime = Time.time;
+                child.trigger = true;
+            }
+            catch { }
         }
-       // GetComponent<Collider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         this.enabled = false;
     }
 }

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33795243158797120}
   - component: {fileID: 23022527347893310}
   - component: {fileID: 65765077171072412}
+  - component: {fileID: 114798539085376656}
   m_Layer: 0
   m_Name: Single (5)
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33959458210472416}
   - component: {fileID: 23882756344278614}
   - component: {fileID: 65108095331017988}
+  - component: {fileID: 114094022925866368}
   m_Layer: 0
   m_Name: Single (3)
   m_TagString: Untagged
@@ -73,6 +75,7 @@ GameObject:
   - component: {fileID: 33305056244396892}
   - component: {fileID: 23477748011144588}
   - component: {fileID: 65439691227481308}
+  - component: {fileID: 114400428530055170}
   m_Layer: 0
   m_Name: Single (9)
   m_TagString: Untagged
@@ -92,6 +95,7 @@ GameObject:
   - component: {fileID: 23603450410724396}
   - component: {fileID: 65953323768100526}
   - component: {fileID: 65137043292979810}
+  - component: {fileID: 114551351567473942}
   m_Layer: 0
   m_Name: Single (4)
   m_TagString: Untagged
@@ -110,6 +114,7 @@ GameObject:
   - component: {fileID: 33054974749619518}
   - component: {fileID: 23111999052998192}
   - component: {fileID: 65817556561459232}
+  - component: {fileID: 114352165697179026}
   m_Layer: 0
   m_Name: Single (2)
   m_TagString: Untagged
@@ -209,7 +214,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -225,7 +229,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -243,7 +246,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -259,7 +261,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -277,7 +278,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -293,7 +293,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -311,7 +310,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -327,7 +325,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -345,7 +342,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
@@ -361,7 +357,6 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -477,3 +472,73 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.262084, y: 1.0018091, z: 8.262085}
   m_Center: {x: 0, y: 0.28092378, z: 0.00037145615}
+--- !u!114 &114094022925866368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126943979242980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f356075fc66763643aeacf7e651c6f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 0
+  trigger: 0
+  movementSpeed: 0
+--- !u!114 &114352165697179026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1956124952192452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f356075fc66763643aeacf7e651c6f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 0
+  trigger: 0
+  movementSpeed: 0
+--- !u!114 &114400428530055170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1246812075592026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f356075fc66763643aeacf7e651c6f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 0
+  trigger: 0
+  movementSpeed: 0
+--- !u!114 &114551351567473942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637497082811722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f356075fc66763643aeacf7e651c6f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 0
+  trigger: 0
+  movementSpeed: 0
+--- !u!114 &114798539085376656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034659375906886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f356075fc66763643aeacf7e651c6f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 0
+  trigger: 0
+  movementSpeed: 0
