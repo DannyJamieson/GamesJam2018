@@ -2,22 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerController : NetworkBehaviour {
+    public GameObject playerGraphic;
+    public GameObject playerVisor;
+    public FirstPersonController fps;
+    public Camera playerCam;
 
-    // Use this for initialization
-    void Update() {
+    private void Start()
+    {
         if (!isLocalPlayer)
-            return;
-
-        float x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        float z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
+        {
+            //fps = this.GetComponent<FirstPersonController>();
+            fps.enabled = false;
+            playerCam.enabled = false;
+        }
     }
 
     public override void OnStartLocalPlayer() {
-        GetComponent<MeshRenderer>().material.color = Color.blue;
+        //playerGraphic.GetComponent<MeshRenderer>().material.color = Color.blue;
+        playerGraphic.SetActive(false);
+        playerVisor.SetActive(false);
     }
 }
