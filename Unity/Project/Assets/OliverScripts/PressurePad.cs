@@ -4,26 +4,31 @@ public class PressurePad : Switch {
 
     public void OnTriggerEnter(Collider other)
     {
-        if(isBlack)
+       
+        if (isBlack && other.tag == "Black")
         {
             doorwayScript.blackActive = true;
+            doorwayScript.CheckDoorActivity();
         }
-        else
+        else if (!isBlack && other.gameObject.tag == "White")
         {
             doorwayScript.whiteActive = true;
+            doorwayScript.CheckDoorActivity();
         }
-        doorwayScript.CheckDoorActivity();
+            
     }
+    
     private void OnTriggerExit(Collider other)
     {
-        if (isBlack)
+        if (isBlack && other.tag == "Black")
         {
             doorwayScript.blackActive = false;
+            doorwayScript.CheckDoorActivity();
         }
-        else
+        else if (!isBlack && other.gameObject.tag == "White")
         {
             doorwayScript.whiteActive = false;
+            doorwayScript.CheckDoorActivity();
         }
-        doorwayScript.CheckDoorActivity();
     }
 }

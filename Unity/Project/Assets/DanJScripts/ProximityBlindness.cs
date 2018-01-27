@@ -5,29 +5,29 @@ using UnityEngine.UI;
 
 public class ProximityBlindness : MonoBehaviour {
     [SerializeField]
-    bool nearPlayer;
+    bool nearPlayer = false;
 	[SerializeField]
 	float maxRadius;
     [SerializeField]
     float blindRadius;
-	public Transform otherPlayer;
     public Image canvasImage;
-	
-	// Use this for initialization
-	void Start(){
-        SphereCollider col = gameObject.AddComponent<SphereCollider>();
-		col.radius = maxRadius;
-		col.isTrigger = true;
+    SphereCollider MySphereCollider;
+    
+    // Use this for initialization
+    void Start(){
+        MySphereCollider = gameObject.AddComponent<SphereCollider>();
+        MySphereCollider.radius = maxRadius;
+        MySphereCollider.isTrigger = true;
+        canvasImage = GameObject.Find("Blind Canvas").GetComponentInChildren<Image>();
 		//find a way to get the other player
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(nearPlayer){
-			float radius = blindRadius - (otherPlayer.position - this.transform.position).magnitude;
+			float radius = blindRadius - GetRadius();
             Color color = canvasImage.color;
             if (radius > 0){
-                //Make them blind
                 color.a = 1;
                 canvasImage.color = color;
 				return;
@@ -40,9 +40,22 @@ public class ProximityBlindness : MonoBehaviour {
 		}
 	}
 
+    float GetRadius()
+    {
+        try
+        {
+            return (GameManager.Instance.BlackPlayer.transform.position - GameManager.Instance.WhitePlayer.transform.position).magnitude;
+        }
+        catch
+        {
+            GameManager.Instance.WhitePlayer = GameObject.FindGameObjectWithTag("White");
+            return (GameManager.Instance.BlackPlayer.transform.position - GameManager.Instance.WhitePlayer.transform.position).magnitude;
+        }
+    }
+
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if ((other.gameObject.tag == "Black" || other.gameObject.tag == "White") && other.gameObject!= this.transform.parent.gameObject)
         {
             nearPlayer = true;
         }
@@ -50,7 +63,7 @@ public class ProximityBlindness : MonoBehaviour {
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if ((other.gameObject.tag == "Black" || other.gameObject.tag == "White") && other.gameObject != this.transform.parent.gameObject)
         {
             nearPlayer = false;
             Color color = canvasImage.color;

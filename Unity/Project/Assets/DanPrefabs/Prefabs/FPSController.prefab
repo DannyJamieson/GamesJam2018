@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 20258144966603546}
   - component: {fileID: 81492744182866080}
   - component: {fileID: 124632526817995778}
+  - component: {fileID: 114379163237351194}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -106,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441937256429222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4862158643123588}
@@ -118,9 +119,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914691286985908}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: 0.2}
-  m_LocalScale: {x: 0.8636149, y: 0.2844928, z: 0.5927017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4862158643123588}
   m_RootOrder: 1
@@ -492,6 +493,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &114379163237351194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441937256429222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ea9eef931475a4095db10eb926e596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearPlayer: 0
+  maxRadius: 4.3
+  blindRadius: 1.67
+  canvasImage: {fileID: 0}
 --- !u!114 &114629142136077098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,6 +524,7 @@ MonoBehaviour:
   fps: {fileID: 114244573510796006}
   playerCam: {fileID: 20258144966603546}
   toDisable: []
+  tagText: {fileID: 0}
 --- !u!114 &114728466632584020
 MonoBehaviour:
   m_ObjectHideFlags: 1
