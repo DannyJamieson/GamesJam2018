@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 396428351}
   - component: {fileID: 396428350}
   - component: {fileID: 396428349}
+  - component: {fileID: 396428355}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -235,7 +236,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -266,7 +267,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 396428348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6ea9eef931475a4095db10eb926e596, type: 3}
   m_Name: 
@@ -274,8 +275,18 @@ MonoBehaviour:
   nearPlayer: 0
   maxRadius: 10
   blindRadius: 3
-  otherPlayer: {fileID: 1936325862}
   canvasImage: {fileID: 1109029215}
+--- !u!114 &396428355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396428348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8d9b1d40425a247b2a12138b30c2d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1109029215 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114353114951544588, guid: 2fb33766a4df4f1458fb32cbdee82fc0,

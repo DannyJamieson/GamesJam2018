@@ -19,6 +19,9 @@ public class ProximityBlindness : MonoBehaviour {
         MySphereCollider.radius = maxRadius;
         MySphereCollider.isTrigger = true;
         canvasImage = GameObject.Find("Blind Canvas").GetComponentInChildren<Image>();
+        LayerMask lm = new LayerMask();
+        lm.value = 6;
+        lm.value = 8;
 		//find a way to get the other player
 	}
 	
