@@ -24,9 +24,13 @@ public class PlayerController : NetworkBehaviour {
             //fps = this.GetComponent<FirstPersonController>();
             fps.enabled = false;
             playerCam.enabled = false;
-           
+
         }
-        GameManager.Instance.SetPlayer(gameObject);
+        else
+        {
+            GameManager.Instance.SetPlayer(gameObject);
+            tagText.text = gameObject.tag;
+        } 
     }
   
     public override void OnStartLocalPlayer() {
@@ -37,6 +41,5 @@ public class PlayerController : NetworkBehaviour {
         playerVisor.SetActive(false);
        
 
-        tagText.text = gameObject.tag;
     }
 }

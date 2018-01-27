@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 101867159}
   - component: {fileID: 101867158}
   - component: {fileID: 101867161}
+  - component: {fileID: 101867162}
   m_Layer: 0
   m_Name: BlackLever
   m_TagString: Untagged
@@ -315,6 +316,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBlack: 1
   doorwayScript: {fileID: 1417953108}
+  interactionRadius: 1.5
+--- !u!135 &101867162
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101867156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &332759066
 Prefab:
   m_ObjectHideFlags: 0
@@ -441,24 +455,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &616008716 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1028023174682810, guid: ae147e21c85b4a1438c4736ca73f79d3,
-    type: 2}
-  m_PrefabInternal: {fileID: 701739570}
---- !u!114 &616008717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 616008716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f869378f1699a9a4b9f2895975ddf198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBlack: 0
-  doorwayScript: {fileID: 1417953108}
 --- !u!4 &616008718 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4157697896771990, guid: ae147e21c85b4a1438c4736ca73f79d3,
@@ -502,6 +498,16 @@ Prefab:
     - target: {fileID: 4157697896771990, guid: ae147e21c85b4a1438c4736ca73f79d3, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969985559009716, guid: ae147e21c85b4a1438c4736ca73f79d3,
+        type: 2}
+      propertyPath: doorwayScript
+      value: 
+      objectReference: {fileID: 1417953108}
+    - target: {fileID: 114969985559009716, guid: ae147e21c85b4a1438c4736ca73f79d3,
+        type: 2}
+      propertyPath: interactionRadius
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae147e21c85b4a1438c4736ca73f79d3, type: 2}
@@ -1089,7 +1095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1536634648
 MonoBehaviour:
   m_ObjectHideFlags: 0

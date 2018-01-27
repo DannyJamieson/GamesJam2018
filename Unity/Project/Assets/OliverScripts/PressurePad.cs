@@ -10,7 +10,7 @@ public class PressurePad : Switch {
             doorwayScript.blackActive = true;
             doorwayScript.CheckDoorActivity();
         }
-        else if (!isBlack && other.gameObject.tag == "White")
+        else if (!isBlack && other.tag == "White")
         {
             doorwayScript.whiteActive = true;
             doorwayScript.CheckDoorActivity();
@@ -25,7 +25,7 @@ public class PressurePad : Switch {
             doorwayScript.blackActive = false;
             doorwayScript.CheckDoorActivity();
         }
-        else if (!isBlack && other.gameObject.tag == "White")
+        else if (!isBlack && other.tag == "White")
         {
             doorwayScript.whiteActive = false;
             doorwayScript.CheckDoorActivity();

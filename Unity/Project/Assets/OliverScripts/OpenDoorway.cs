@@ -15,11 +15,7 @@ public class OpenDoorway : MonoBehaviour {
 
     public void CheckDoorActivity()
     {
-        if (blackActive == false || whiteActive == false)
-        {
-            door.SetActive(true);
-        }
-        else if (blackActive && whiteActive)
+        if (blackActive && whiteActive)
         {
             door.SetActive(false);
         }
