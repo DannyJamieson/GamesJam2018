@@ -10,6 +10,8 @@ public class PlayerController : NetworkBehaviour {
     public FirstPersonController fps;
     public Camera playerCam;
 
+    public GameObject[] toDisable;
+
     private void Start()
     {
         if (!isLocalPlayer)

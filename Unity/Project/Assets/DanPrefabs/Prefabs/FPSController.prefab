@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
+  m_TransformSyncMode: 1
   m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  m_InterpolateMovement: 5
 --- !u!114 &114244573510796006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,6 +507,7 @@ MonoBehaviour:
   playerVisor: {fileID: 1914691286985908}
   fps: {fileID: 114244573510796006}
   playerCam: {fileID: 20258144966603546}
+  toDisable: []
 --- !u!114 &114728466632584020
 MonoBehaviour:
   m_ObjectHideFlags: 1
