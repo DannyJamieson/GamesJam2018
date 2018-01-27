@@ -10,6 +10,9 @@ public class GameManager : NetworkBehaviour {
     [SyncVar]
     public GameObject BlackPlayer;
 
+    public float staminaLevel = 100f;
+    public float maxStamina = 100f;
+
     private void Awake()
     {
         
