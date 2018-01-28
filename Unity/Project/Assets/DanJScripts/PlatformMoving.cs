@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlatformMoving : MonoBehaviour {
     List<PlatformMovementChildren> movingPlatforms = new List<PlatformMovementChildren>();
-
+    
     //[SerializeField]
     bool test = false;
 
     private void Start()
     {
+       
         for(int i =0; i<transform.childCount; i++)
         {
             try

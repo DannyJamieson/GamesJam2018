@@ -11,9 +11,10 @@ public class PlatformMovementChildren : NetworkBehaviour {
     public bool trigger = false;
     [SerializeField]
     float randomMovement = 5;
+    BoxCollider myCol;
 
     // public float rotValue
-    
+
     float journeyDistance;
  
     float movementSpeed;
@@ -30,9 +31,16 @@ public class PlatformMovementChildren : NetworkBehaviour {
         {
             return;
         }
+
+        try
+        {
+            myCol = GetComponent<BoxCollider>();
+            myCol.enabled = false;
+        }
+        catch { }
         //myMaterial = new Material(GetComponent<Renderer>().material);
-       // GetComponent<Renderer>().material = myMaterial;
-        
+        // GetComponent<Renderer>().material = myMaterial;
+
 
 
         movementSpeed = Random.Range(10, 15);
@@ -61,7 +69,8 @@ public class PlatformMovementChildren : NetworkBehaviour {
         {
             SetNewPos();
             SetNewRot();
-            if (Time.time - startTime > 5)
+            
+            if (Time.time - startTime > 4)
             {
                 this.enabled = false;
             }
@@ -73,6 +82,11 @@ public class PlatformMovementChildren : NetworkBehaviour {
         float distCovered = (Time.time - startTime) * movementSpeed;
         float fracJourney = distCovered / journeyDistance;
         transform.position = Vector3.Lerp(startPos,endPos,fracJourney);
+        if(fracJourney > 0.8)
+        {
+            myCol.enabled = true;
+        }
+
       //  Color newColour = myMaterial.color;
        // newColour.a = fracJourney;
         //myMaterial.color = newColour;
