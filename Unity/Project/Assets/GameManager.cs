@@ -33,16 +33,20 @@ public class GameManager : NetworkBehaviour {
                 Instance = this;
             }
         }
-        Debug.Log("here");
+        
         netManager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
     }
 
     public void Update() {
-        if (BlackPlayer != null)
+        if (isServer)
         {
-            if ((BlackPlayer != null && BlackPlayer.transform.position.y <= -10) ||(WhitePlayer != null && WhitePlayer.transform.position.y <= -10))
+            if (BlackPlayer != null)
             {
-                netManager.ServerChangeScene("Oliver");
+                if ((BlackPlayer != null && BlackPlayer.transform.position.y <= -10) || (WhitePlayer != null && WhitePlayer.transform.position.y <= -10))
+                {
+                    netManager.ServerChangeScene("Oliver");
+
+                }
             }
         }
     }
