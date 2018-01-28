@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformMoving : MonoBehaviour {
     List<PlatformMovementChildren> movingPlatforms = new List<PlatformMovementChildren>();
 
-    [SerializeField]
+    //[SerializeField]
     bool test = false;
 
     private void Start()

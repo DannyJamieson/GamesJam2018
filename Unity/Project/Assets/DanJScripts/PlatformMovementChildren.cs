@@ -5,13 +5,17 @@ using UnityEngine.Networking;
 
 [RequireComponent (typeof(NetworkTransform))]
 public class PlatformMovementChildren : NetworkBehaviour {
+    [HideInInspector]
     public float startTime;
+    [HideInInspector]
     public bool trigger = false;
+    [SerializeField]
     float randomMovement = 5;
 
-    // public float rotValue;
+    // public float rotValue
+    
     float journeyDistance;
-    [SerializeField]
+ 
     float movementSpeed;
     Vector3 endPos;
     Vector3 startPos;
