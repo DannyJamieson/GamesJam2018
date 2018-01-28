@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114156422681566570}
   - component: {fileID: 65043412231815592}
   m_Layer: 0
-  m_Name: Stairs
+  m_Name: Stairs Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   trigger: 0
-  movementSpeed: 0
+  randomMovement: 5
 --- !u!114 &114156422681566570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -422,7 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dbcb8078cd21404681fd8c0939382a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
 --- !u!114 &114592636314118618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,7 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   trigger: 0
-  movementSpeed: 0
+  randomMovement: 5
 --- !u!114 &114670079485590800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -450,7 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   trigger: 0
-  movementSpeed: 0
+  randomMovement: 5
 --- !u!114 &114924337238696542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -464,4 +463,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   trigger: 0
-  movementSpeed: 0
+  randomMovement: 5
