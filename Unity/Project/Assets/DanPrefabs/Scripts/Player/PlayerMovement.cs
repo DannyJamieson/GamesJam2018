@@ -33,6 +33,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool regenerateStamina= false;
         public Image staminaImage;
 
+        private bool _whiteActivated;
+        private DoorScript ds;
+
         [Header("Unity Bullshit")]
         #region Unity Variables
         [SerializeField]
@@ -93,6 +96,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             _regenCooldown = regenCooldown;
             if (!isLocalPlayer)
             {
+                GetComponentInChildren<AudioListener>().enabled = false;
                 playerCam.enabled = false;
                 this.enabled = false;
             }
@@ -119,6 +123,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             tagText = GameObject.Find("Text").GetComponent<Text>();
             playerGraphics.SetActive(false);
             playerVisor.SetActive(false);
+            GameManager.Instance.localPlayer = true;
         }
 
         private void Update()

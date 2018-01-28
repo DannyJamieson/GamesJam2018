@@ -10,12 +10,13 @@ public class GameManager : NetworkBehaviour {
     [SyncVar]
     public GameObject BlackPlayer;
 
+    public bool localPlayer = false;
+
     public float staminaLevel = 100f;
     public float maxStamina = 100f;
 
     private void Awake()
     {
-        
         if(Instance == null)
         {
             Instance = FindObjectOfType<GameManager>();

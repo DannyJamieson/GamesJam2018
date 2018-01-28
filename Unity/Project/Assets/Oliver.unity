@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WhitePlayer: {fileID: 0}
   BlackPlayer: {fileID: 0}
+  localPlayer: 0
   staminaLevel: 100
   maxStamina: 100
 --- !u!4 &28434585
@@ -199,6 +200,7 @@ GameObject:
   - component: {fileID: 101867158}
   - component: {fileID: 101867162}
   - component: {fileID: 101867161}
+  - component: {fileID: 101867163}
   m_Layer: 9
   m_Name: BlackLever
   m_TagString: Untagged
@@ -286,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorScript: {fileID: 0}
-  targetObject: {fileID: 1417953107}
+  targetObject: {fileID: 1113767915}
   isBlackSwitch: 1
   isWhiteSwitch: 0
   interactKey: {fileID: 688347871}
@@ -302,27 +304,38 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &104686595 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1028023174682810, guid: ae147e21c85b4a1438c4736ca73f79d3,
-    type: 2}
-  m_PrefabInternal: {fileID: 701739570}
---- !u!114 &104686597
+--- !u!114 &101867163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 104686595}
+  m_GameObject: {fileID: 101867156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00da3a42b6d7454c8c0d71045a71d86, type: 3}
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorScript: {fileID: 0}
-  targetObject: {fileID: 1113767915}
-  isBlackSwitch: 0
-  isWhiteSwitch: 1
-  interactKey: {fileID: 688347871}
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1 &267531827 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1803117395299874, guid: e348d5bbe12a92b43aa2942a486cdf0f,
@@ -478,9 +491,50 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 1803117395299874, guid: e348d5bbe12a92b43aa2942a486cdf0f, type: 2}
+      propertyPath: m_Name
+      value: DoorWat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e348d5bbe12a92b43aa2942a486cdf0f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &429286308 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1028023174682810, guid: ae147e21c85b4a1438c4736ca73f79d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 701739570}
+--- !u!114 &429286315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429286308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 174
+    i1: 20
+    i2: 126
+    i3: 33
+    i4: 200
+    i5: 91
+    i6: 74
+    i7: 20
+    i8: 56
+    i9: 196
+    i10: 115
+    i11: 108
+    i12: 167
+    i13: 63
+    i14: 121
+    i15: 211
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1 &458901007
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,31 +750,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114969985559009716, guid: ae147e21c85b4a1438c4736ca73f79d3,
-        type: 2}
-      propertyPath: doorwayScript
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969985559009716, guid: ae147e21c85b4a1438c4736ca73f79d3,
-        type: 2}
-      propertyPath: interactionRadius
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1028023174682810, guid: ae147e21c85b4a1438c4736ca73f79d3, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1028023174682810, guid: ae147e21c85b4a1438c4736ca73f79d3, type: 2}
       propertyPath: m_Name
       value: WhiteLever
       objectReference: {fileID: 0}
-    - target: {fileID: 135759713965790254, guid: ae147e21c85b4a1438c4736ca73f79d3,
+    - target: {fileID: 114429404567919776, guid: ae147e21c85b4a1438c4736ca73f79d3,
         type: 2}
-      propertyPath: m_Radius
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114969985559009716, guid: ae147e21c85b4a1438c4736ca73f79d3, type: 2}
+      propertyPath: targetObject
+      value: 
+      objectReference: {fileID: 1113767915}
+    - target: {fileID: 114429404567919776, guid: ae147e21c85b4a1438c4736ca73f79d3,
+        type: 2}
+      propertyPath: interactKey
+      value: 
+      objectReference: {fileID: 688347871}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae147e21c85b4a1438c4736ca73f79d3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &708221262 stripped
@@ -937,43 +981,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1803117395299874, guid: e348d5bbe12a92b43aa2942a486cdf0f,
     type: 2}
   m_PrefabInternal: {fileID: 407830918}
---- !u!4 &1037048369 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4956693043542242, guid: e348d5bbe12a92b43aa2942a486cdf0f,
-    type: 2}
-  m_PrefabInternal: {fileID: 407830918}
---- !u!114 &1037048370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1037048368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 227
-    i1: 72
-    i2: 213
-    i3: 187
-    i4: 225
-    i5: 42
-    i6: 146
-    i7: 180
-    i8: 58
-    i9: 162
-    i10: 148
-    i11: 42
-    i12: 72
-    i13: 108
-    i14: 223
-    i15: 15
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1 &1087038759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,25 +1065,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1182979544541326, guid: e348d5bbe12a92b43aa2942a486cdf0f,
     type: 2}
   m_PrefabInternal: {fileID: 407830918}
---- !u!114 &1113767916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113767915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1267208747, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 1037048369}
-  m_ChildIndex: 0
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_MovementThreshold: 0.001
-  m_InterpolateRotation: 0.5
-  m_InterpolateMovement: 0.5
 --- !u!114 &1113767917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,27 +1097,6 @@ MonoBehaviour:
     i15: 15
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &1113767918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113767915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
 --- !u!114 &1113767919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,8 +1108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d3323905614e344a9408bd2021a61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackActivated: 0
   whiteActivated: 0
+  blackActivated: 0
   doorObject: {fileID: 1037048368}
 --- !u!1 &1125943132
 GameObject:
@@ -1610,9 +1577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d3323905614e344a9408bd2021a61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackActivated: 0
   whiteActivated: 0
-  doorObject: {fileID: 267531827}
+  blackActivated: 0
+  doorObject: {fileID: 101867156}
 --- !u!114 &1417953110
 MonoBehaviour:
   m_ObjectHideFlags: 0

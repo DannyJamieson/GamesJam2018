@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class BaseSwitch : MonoBehaviour {
+public class BaseSwitch : NetworkBehaviour {
 
     public DoorScript doorScript;       // Reference to the door script.
     public GameObject targetObject;     // Target of the script.
