@@ -16,7 +16,7 @@ public class BaseCamera : MonoBehaviour {
     [Tooltip("Set the rotation amount for the camera, this is what it will be multiplied by.")]
     public float rotateAmount;
 
-    public void Start()
+    public virtual void Start()
     {
         // If the rotateAmount is set to zero, freak out (unless the camera is static).
         if (!isStatic && rotateAmount == 0)
@@ -30,7 +30,7 @@ public class BaseCamera : MonoBehaviour {
         
     }
 
-    public void FixedUpdate ()
+    public virtual void FixedUpdate ()
     {
         // If the camera is not static, rotate it using rotateAmount; otherwise ignore.
         if(!isStatic)

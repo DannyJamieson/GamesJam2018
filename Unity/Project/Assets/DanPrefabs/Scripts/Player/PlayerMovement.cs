@@ -30,7 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float regenCooldown = 2f;//time between last using stamina and stam regen starting
         private float currentRegenCooldown;
         private float _regenCooldown;
-        private bool regenerateStamina= false;
+        private bool regenerateStamina = false;
         public Image staminaImage;
 
         private bool _whiteActivated;
@@ -104,7 +104,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 tagText.text = gameObject.tag;
             }
-            
+
 
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
@@ -128,16 +128,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Update()
         {
-            if(GameManager.Instance.staminaLevel < GameManager.Instance.maxStamina && regenerateStamina)//if stamina is less than 100 (max value)
+            if (GameManager.Instance.staminaLevel < GameManager.Instance.maxStamina && regenerateStamina)//if stamina is less than 100 (max value)
             {
                 //increase it by its regeneration speed * time delta time
                 GameManager.Instance.staminaLevel += (staminaRegenerationPerSecond * Time.deltaTime);
             }
 
-            if(m_CharacterController.isGrounded && m_IsWalking)
+            if (m_CharacterController.isGrounded && m_IsWalking)
             {
                 currentRegenCooldown -= 1f * Time.deltaTime;
-                if(currentRegenCooldown <= 0)
+                if (currentRegenCooldown <= 0)
                 {
                     regenerateStamina = true;
                 }
@@ -305,7 +305,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
-            if(!m_IsWalking)
+            if (!m_IsWalking)
             {
                 GameManager.Instance.staminaLevel -= (sprintCostPerSecond * Time.deltaTime);
             }
